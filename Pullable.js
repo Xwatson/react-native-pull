@@ -151,6 +151,9 @@ export default class extends Component {
                 scrollEnabled: true,
             });
         }
+        if (typeof this.props.onScroll === 'function') {
+          this.props.onScroll(e);
+        }
     }
 
     isPullState() {
